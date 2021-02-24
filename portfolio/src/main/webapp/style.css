@@ -1,9 +1,69 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/*
+Honeydew ------> F1FAEE
+powder blue ---> A8DADC
+Celadon blue --> 457B9D
+Imperial red --> E63946
+Prussian blue -> 1D3557
+*/
+
+
+
+/*   Global
+------------------------------------*/
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
 }
 
-#greeting-container {
-  margin-top: 20px;
+body{
+  margin: 0;
+  background: grey;
+}
+
+header{
+  background: #1b4965;
+}
+
+.wrapper-container{
+  max-width: 1150px;
+  margin: 0 auto;
+  color: white;
+  overflow: auto;
+}
+h1{
+  font-size: 75px;
+  padding-top: 7%;
+  margin: 0;
+}
+
+h2{
+  font-size: 35px;
+  padding-top: 2%;
+  margin: 0;
+}
+
+
+/*   Header & Footer
+------------------------------------*/
+header p{
+  font-size: 25px;
+  margin-bottom: 5%;
+}
+
+.left-panel{
+  float: left;
+  width: 20%;
+  padding-top: 6%;
+}
+.right-panel{
+  float: right;
+  width: 80%;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
 }
