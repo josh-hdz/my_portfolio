@@ -18,7 +18,6 @@ html{
 }
 body{
   margin: 0;
-  background: grey;
   font-family: Ubuntu;
   color: white;
   background: url("assets/img/background.png");
@@ -27,16 +26,24 @@ body{
   max-width: 1150px;
   margin: 0 auto;
   overflow: auto;
+  padding: 2%;
 }
 h1{
   font-size: 60px;
   margin-top: 7%;
 }
 h2{
-  font-size: 35px;
+  font-size: 40px;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+h3{
+  font-size: 25px;
+  margin-bottom: 1%;
+  margin-top: 0;
 }
 p{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /*   Header & Footer
@@ -51,7 +58,6 @@ p{
 }
 header .wrapper-container, footer .wrapper-container {
   background: #1D3557;
-  padding: 2%;
 }
 
 footer{
@@ -82,23 +88,37 @@ header img{
 ------------------------------------*/
 main .wrapper-container{
   background: #457B9D;
-  padding: 2%;
-}
-
-main h2{
-  margin: 0;
-}
-
-.projerct-desciption{
-    float: left;
-    max-width: 70%;
-}
-
-.tech-stack{
-    float: right;
-    max-width: 30%;
 }
 
 .project{
-    overflow: auto;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+.project-description{
+    float: left;
+    width: 50%;
+  height: 100%;
+  position: absolute;
+  padding-top: 3%;
+}
+.project-description p{
+  margin: 0;
+}
+
+.tech-stack{
+  float: right;
+  width: 50%;
+  /*padding: 5%;*/
+  padding: 5%;
+  text-align: center;
+
+}
+
+.tech-stack img{
+  width: 70px;
+  height: 70px;
+  margin: 0 4%;
+  display: inline-block;
 }
