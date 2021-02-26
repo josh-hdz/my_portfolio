@@ -72,10 +72,10 @@ footer a{
   margin: 10px;
 }
 
-img{
+header img{
   width: 200px;
   height: 200px;
-  border-radius: 40px;
+  border-radius: 100px;
 }
 
 /*  Main
@@ -87,4 +87,18 @@ main .wrapper-container{
 
 main h2{
   margin: 0;
+}
+
+.projerct-desciption{
+    float: left;
+    max-width: 70%;
+}
+
+.tech-stack{
+    float: right;
+    max-width: 30%;
+}
+
+.project{
+    overflow: auto;
 }
