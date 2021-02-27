@@ -82,6 +82,17 @@ header img{
   width: 200px;
   height: 200px;
   border-radius: 100px;
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+#greeting-container {
+  animation: fadeIn 2.5s infinite alternate;
+}
+
+header p{
+  font-size: 30px;
+  margin: 0;
 }
 
 /*  Main
