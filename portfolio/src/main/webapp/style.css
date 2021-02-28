@@ -1,15 +1,13 @@
-:root{
-    --celadon-blue: 457B9D;
-    --honeydew: F1FAEE;
-    --imperialred: E63946;
-    --prussian-blue: 1D3557;
-    --powder-blue: A8DADC;
-}
-
-
-
 /*   Global
 ------------------------------------*/
+:root{
+    --celadon-blue: #457B9D;
+    --honeydew: #F1FAEE;
+    --imperial-red: #E63946;
+    --prussian-blue: #1D3557;
+    --powder-blue: #A8DADC;
+}
+
 html{
     box-sizing: border-box;
 }
