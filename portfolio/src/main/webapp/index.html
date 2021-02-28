@@ -6,14 +6,132 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
+  <body onload="addRandomGreeting()">
+      <header>
+           <div class="wrapper-container">
+              <div class="left-panel">
+                  <img src="assets/img/josh-hdz.jpeg">
+              </div>
+              <div class="right-panel">
+                  <h1>Joshua S. Hernandez Reza</h1>
+                  <p id="greeting-container"></p>
+              </div>
+          </div>
+      </header>
+      <main>
+          <div class="wrapper-container">
+              <h2>Let me tell you a little about me!</h2>
+              <p>I  was born in Ciudad Juarez, Chihuahua, Mexico. A small
+                  city back in the day. Yet if you ask me where I'm from I would
+                  say that from everywhere. I've lived in two countries, four states,
+                  about six cities, and ten houses. Impressive huh? Although
+                  the constant moving came with its issues, I learn to
+                  adapt to unknown enviroments/situations, I met
+                  people from different backgrounds, among other things. So yeah...
+                  that's me in a nutshell.</p>
+              <p>Now there is two things I love; Basketball and computers. I
+                  grew up watching Michel Jordan and I been playing ball ever
+                  since I was three years old. In the other hand both my parent
+                  are software engineers so naturally computers were a given.
+                  Since my height wont help me to play at the NBA I aspire to
+                  become a software engineer.</p>
+              <p>Which leads us to my educaiton. I was in Mexico up to
+                  middle school. After that I moved to California where I got my
+                  High School diploma and enrolled in a comunity college planning
+                  to transfere to UCSD to get a B.S. in computer science. Sadyly
+                  there was some missunderstandigs with my student visa so I had to
+                  take my career goal and continue it in Mexico at El
+                  Tecnologico de Monterrey where I'm a sophmore now.</p>
+          </div>
+          <div class="wrapper-container">
+              <h2>My Projects</h2>
+<!-------------------------------Project SECOM START--------------------------->
+                <div class="project">
+                        <div class="project-description">
+                            <h3>SECOM LAN application (In development).</h3>
+                            <p>Python based application to keep track of the
+                                inventory for a company dedicated to electric
+                                installations.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <img src="assets/logo/python.png" alt="Python">
+                            <img src="assets/logo/mysql.png" alt="MySQL">
+                            <img src="assets/logo/raspberry-pi.png"
+                                 alt="Raspberry Pi">
+                            <img src="assets/logo/git.png" alt="Git">
+                        </div>
+                </div>
+<!-------------------------------Project bIoT START---------------------------->
+                <div class="project">
+                        <div class="project-description">
+                            <h3>bIoT.</h3>
+                            <p>IoT network of garbage containers for
+                                the recollection of data to train AI to increase efficiency
+                                of garbage recollection routes inside school campus.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <img src="assets/logo/c++.png" alt="c++">
+                            <img src="assets/logo/vertical-firebase.png"
+                                 alt="Firebase">
+                            <img src="assets/logo/microcontroller.png"
+                                 alt="Arduino">
+                        </div>
+                </div>
+<!-------------------------Project LAN server START---------------------------->
+                <div class="project">
+                    <div class="project-description">
+                        <h3>LAN server</h3>
+                        <p>With help of docer containers and open
+                            source software I configure my raspberry pi
+                            as a NAS server as well as a network wide
+                            filter for ads.</p>
+                    </div>
+                    <div class="tech-stack">
+                        <img src="assets/logo/raspberry-pi.png"
+                             alt="Raspberry pi">
+                        <img src="assets/logo/docker.png"
+                             alt="Docker">
+                    </div>
+                </div>
+<!------------------------------Project SEARCH START--------------------------->
+                <div class="project">
+                        <div class="project-description">
+                            <h3>Search streaming services.</h3>
+                            <p>Object oriented C++ console application for searching
+                            and rating movies and series.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <img src="assets/logo/c++.png" alt="C++">
+                        </div>
+                </div>
+<!------------------------------Project Hangman START-------------------------->
+                <div class="project">
+                        <div class="project-description">
+                            <h3><i>Hangman.</i></h3>
+                            <p>Python console game for a second-degree
+                                equation-based hangman.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <img src="assets/logo/python.png" alt="Python">
+                        </div>
+                </div>
+          </div>
+      </main>
   </body>
+  <footer>
+      <div class="wrapper-container">
+          <h2>Let's Keep in Touch!</h2>
+      <!-- Social media and contact links. Add or remove any networks. -->
+            <a href="mailto:joshua.hdz.reza@gmail.com">
+                <img src="assets/logo/gmail.png" alt="email">
+            </a>
+            <a href="https://www.linkedin.com/in/joshua-hernandez-3776aa1ba/"
+               target="_blank">
+                <img src="assets/logo/linkedin-logo.png" alt="linkedin">
+            </a>
+            <a href="https://github.com/josh-hdz" target="_blank">
+                <img src="assets/logo/GitHub-Mark-Light-32px.png" alt="Github">
+            </a>
+      </div>
+  </footer>
 </html>
