@@ -11,38 +11,45 @@
 /*   Global
 ------------------------------------*/
 html{
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *, *:before, *:after{
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
+
 body{
-  margin: 0;
-  font-family: Ubuntu;
-  color: white;
-  background: url("assets/img/background.png");
+    background: url("assets/img/background.png");
+    color: white;
+    font-family: Ubuntu;
+    margin: 0;
 }
+
 .wrapper-container{
-  max-width: 1150px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 2%;
+    max-width: 1150px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 2%;
 }
+
 h1{
-  font-size: 60px;
-  margin-top: 7%;
-  margin-bottom: 2%;
+    font-size: 60px;
+    margin-bottom: 2%;
+    margin-top: 7%;
 }
+
 h2{
-  font-size: 40px;
-  margin-bottom: 3%;
-  margin-top: 3%;
+    font-size: 40px;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
+
 h3{
-  font-size: 25px;
-  margin-bottom: 1%;
-  margin-top: 0;
+    font-size: 25px;
+    margin-bottom: 1%;
+    margin-top: 0;
 }
+
 p{
   font-size: 20px;
 }
@@ -50,60 +57,63 @@ p{
 /*   Header & Footer
 ------------------------------------*/
 .left-panel{
-  float: left;
-  width: 20%;
+    float: left;
+    width: 20%;
 }
+
 .right-panel{
-  float: right;
-  width: 80%;
+    float: right;
+    width: 80%;
 }
+
 header .wrapper-container, footer .wrapper-container {
-  background: #1D3557;
+    background: var(--prussian-blue);
 }
 
 footer{
-  text-align: center;
+    text-align: center;
 }
 
 footer h2{
-  margin-top: 0;
+    margin-top: 0;
 }
+
 footer img{
-  width: 32px;
-  height: 32px;
+    height: 32px;
+    width: 32px;
 }
 
 footer a{
-  font-size: 20px;
-  color: white;
-  margin: 10px;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
 }
 
 header img{
-  border-radius: 100px;
-  max-width: 200px;
-  min-height: 200px;
-  width: auto;
-  height: auto;
+    border-radius: 100px;
+    height: auto;
+    max-width: 200px;
+    min-height: 200px;
+    width: auto;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
+    from { opacity: 0; }
 }
 
 #greeting-container {
-  animation: fadeIn 2.5s infinite alternate;
+    animation: fadeIn 2.5s infinite alternate;
 }
 
 header p{
-  font-size: 30px;
-  margin: 0;
+    font-size: 30px;
+    margin: 0;
 }
 
 /*  Main
 ------------------------------------*/
 main .wrapper-container{
-  background: #457B9D;
+    background: var(--celadon-blue);
 }
 
 .project{
