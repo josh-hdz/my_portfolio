@@ -1,10 +1,10 @@
-/*
-Honeydew ------> F1FAEE
-powder blue ---> A8DADC
-Celadon blue --> 457B9D
-Imperial red --> E63946
-Prussian blue -> 1D3557
-*/
+:root{
+    --celadon-blue: 457B9D;
+    --honeydew: F1FAEE;
+    --imperialred: E63946;
+    --prussian-blue: 1D3557;
+    --powder-blue: A8DADC;
+}
 
 
 
