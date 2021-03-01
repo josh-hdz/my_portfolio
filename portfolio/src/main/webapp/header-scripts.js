@@ -15,6 +15,12 @@
 /**
  * Adds a random greeting to the page.
  */
+
+function functionManager(){
+    showDate();
+    addRandomGreeting();
+}
+
 function addRandomGreeting(last=null) {
   let chosen = "";
   const greeter = document.getElementById('greeting-container');
@@ -32,4 +38,12 @@ function addRandomGreeting(last=null) {
 
   greeter.innerText = chosen;
   setInterval(addRandomGreeting, 5000, chosen);
+}
+
+async function showDate() {
+  const responseFromServer = await fetch('/date');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = textFromResponse;
 }
