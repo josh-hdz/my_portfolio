@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="randomGreeting.js"></script>
-    <script src="servedDate.js"></script>
+    <script src="header-scripts.js"></script>
   </head>
-  <body onload="addRandomGreeting()" onload="showDate()">
+  <body onload="functionManager()">
       <header>
            <div class="wrapper-container">
               <div class="left-panel">
@@ -120,7 +119,7 @@
           </div>
       </main>
   </body>
-  <footer>
+  <footer  >
       <div class="wrapper-container">
           <h2>Let's Keep in Touch!</h2>
       <!-- Social media and contact links. Add or remove any networks. -->
@@ -135,5 +134,6 @@
                 <img src="assets/logo/GitHub-Mark-Light-32px.png" alt="Github">
             </a>
       </div>
+      <p id="date-container"></p>
   </footer>
 </html>
