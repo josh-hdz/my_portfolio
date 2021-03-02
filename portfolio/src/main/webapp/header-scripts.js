@@ -12,8 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 /**
- * Adds a random greeting to the page.
+ * Calls needed fucntions to display greeting and date in header.
+ */
+function setHeaderData(){
+    showDate();
+    addRandomGreeting();
+}
+
+
+/**
+ * Adds a random greeting to the page's header every 5s.
  */
 function addRandomGreeting(last=null) {
   let chosen = "";
@@ -32,4 +42,15 @@ function addRandomGreeting(last=null) {
 
   greeter.innerText = chosen;
   setInterval(addRandomGreeting, 5000, chosen);
+}
+
+/**
+ * Request data to server's URL '/data' to display result in the page's header.
+ */
+async function showDate() {
+  const responseFromServer = await fetch('/date');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = textFromResponse;
 }
