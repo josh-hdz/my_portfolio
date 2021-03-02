@@ -16,8 +16,7 @@
 /**
  * Calls needed fucntions to display greeting and date in header.
  */
-
-function functionManager(){
+function setHeaderData(){
     showDate();
     addRandomGreeting();
 }
