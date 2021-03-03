@@ -159,44 +159,29 @@ main .wrapper-container{
 }
 
 #feedback .right-panel{
-    height: 25vh;
-    width: 60%;
+    margin-right: 14%;
+    width: 55%;
+    height: 30vh;
 }
 
 #feedback .left-panel{
-    height: 25vh;
-    width: 40%;
+    margin-left: 14%;
+    text-align: right;
+    width: 15%;
+    height: 30vh;
 }
 
-#feedback form{
-    height: 50%;
-}
-
-#feedback p{
-    font-size: 15px;
+#feedback label{
+    font-size: 20px;
 }
 
 #feedback textarea{
     height: 10vh;
-    margin-bottom: 2%;
-    margin-top: 8%;
     resize: vertical;
-    width: 63%;
+    margin-bottom: 2%;
+    width: 100%;
 }
 
-#feedback .input-description{
-    float: left;
-    padding-right: 2%;
-    text-align: right;
-    width: 30%;
-}
-
-#feedback .form-inputs{
-    float: right;
-    width: 70%;
-}
-
-#feedback .input-description p{
-    margin-bottom: 34%;
-    margin-top: 0;
+#feedback input[type="checkbox"]{
+    margin-right: 4%;
 }

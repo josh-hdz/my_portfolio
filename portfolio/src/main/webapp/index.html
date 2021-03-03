@@ -116,31 +116,28 @@
 <!-------------------------------Form START-------------------------------------->
                 <div id="feedback">
                     <h2>Help me to get better</h2>
-                    <div class="left-panel">
-                        <p>I'm more of a back-end person. Please feel free to give feedback or
-                            ideas/challenges to make this website better and make me a better
-                            developer.</p>
-                    </div>
-                    <div class="right-panel">
-                        <form action="/form-handler" method="POST">
-                            <div class="input-description">
-                                <p>Elaborate:</p>
-                                <p>Reason:</p>
-                            </div>
-                            <div class="form-inputs">
-                                <label>Feedback</label>
-                                <input type="checkbox" name="Feedback" value="true">
-                                <label>Idea/challenge</label>
-                                <input type="checkbox" name="Idea/challenge" value="true">
-                                <label>Report bug</label>
-                                <input type="checkbox" name="Report bug" value="true">
-                                <br/>
-                                <textarea name="Description"></textarea>
-                                <br/>
-                                <input type="submit" />
-                            </div>
-                        </form>
-                    </div>
+                    <p>I'm more of a back-end person. Please feel free to give feedback or
+                        ideas/challenges to make this website better and make me a better
+                        developer.</p>
+                    <form action="/form-handler" method="POST">
+                        <div class="left-panel">
+                            <label>Reason:</label>
+                            <br/>
+                            <label>Elaborate:</label>
+                        </div>
+                        <div class="right-panel">
+                            <label>Feedback</label>
+                            <input type="checkbox" name="Feedback" value="true">
+                            <label>Idea/challenge</label>
+                            <input type="checkbox" name="Idea/challenge" value="true">
+                            <label>Report bug</label>
+                            <input type="checkbox" name="Report bug" value="true">
+                            <br/>
+                            <textarea name="Description"></textarea>
+                            <br/>
+                            <input type="submit" />
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>
