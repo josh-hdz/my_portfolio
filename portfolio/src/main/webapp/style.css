@@ -151,3 +151,52 @@ header p{
 main .wrapper-container{
     background: var(--celadon-blue);
 }
+
+/*  Feedback
+------------------------------------*/
+#feedback{
+    overflow: hidden;
+}
+
+#feedback .right-panel{
+    height: 25vh;
+    width: 60%;
+}
+
+#feedback .left-panel{
+    height: 25vh;
+    width: 40%;
+}
+
+#feedback form{
+    height: 50%;
+}
+
+#feedback p{
+    font-size: 15px;
+}
+
+#feedback textarea{
+    height: 10vh;
+    margin-bottom: 2%;
+    margin-top: 8%;
+    resize: vertical;
+    width: 63%;
+}
+
+#feedback .input-description{
+    float: left;
+    padding-right: 2%;
+    text-align: right;
+    width: 30%;
+}
+
+#feedback .form-inputs{
+    float: right;
+    width: 70%;
+}
+
+#feedback .input-description p{
+    margin-bottom: 34%;
+    margin-top: 0;
+}
