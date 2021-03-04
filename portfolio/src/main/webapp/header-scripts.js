@@ -14,43 +14,37 @@
 
 
 /**
- * Calls needed fucntions to display greeting and date in header.
+ * Feches needed info for header and calls needed fucntions to display greeting 
+ * and date in header.
  */
-function setHeaderData(){
-    showDate();
-    addRandomGreeting();
+async function setHeaderData(){
+    const responseFromServer = await fetch('/header-handler');
+    const info = await responseFromServer.json();
+
+    showDate(info.todayDate);
+    addRandomGreeting(info.chosenGreetings);
 }
 
 
 /**
  * Adds a random greeting to the page's header every 5s.
  */
-function addRandomGreeting(last=null) {
-  let chosen = "";
+function addRandomGreeting(greetings, last=null) {
   const greeter = document.getElementById('greeting-container');
-  const greetings = [
-    'Hello world!',
-    '¡Hola Mundo!',
-    'Привет, мир!',
-    'Ciao mondo!',
-    'Bonjour le monde!'
-  ];
+  let chosen = "";
 
   do{
     chosen = greetings[Math.floor(Math.random() * greetings.length)];
   } while(chosen == last);
 
   greeter.innerText = chosen;
-  setInterval(addRandomGreeting, 5000, chosen);
+  setInterval(addRandomGreeting, 5000, greetings, chosen);
 }
 
 /**
- * Request data to server's URL '/data' to display result in the page's header.
+ * displays the date on page's header.
  */
-async function showDate() {
-  const responseFromServer = await fetch('/date');
-  const textFromResponse = await responseFromServer.text();
-
+function showDate(date) {
   const dateContainer = document.getElementById('date-container');
-  dateContainer.innerText = textFromResponse;
+  dateContainer.innerText = date;
 }
