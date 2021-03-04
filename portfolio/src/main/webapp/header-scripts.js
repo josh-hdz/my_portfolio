@@ -14,7 +14,7 @@
 
 
 /**
- * Feches needed info for header and calls needed fucntions to display greeting 
+ * Fetches needed info for header and calls needed functions to display greeting 
  * and date in header.
  */
 async function setHeaderData(){
@@ -27,10 +27,21 @@ async function setHeaderData(){
 
 
 /**
- * Adds a random greeting to the page's header every 5s.
+ * Recursively adds a random greeting to the page's header every 5s.
+ * 
+ * @param {array of strings} greetings - greetings to schoose from.
+ * @param {string} last - last greeting chosen
+ * 
+ * @return None
  */
-function addRandomGreeting(greetings, last=null) {
+function addRandomGreeting(greetings, last) {
+  /**
+  * @type {Object HTMLParagraphElement}
+  */
   const greeter = document.getElementById('greeting-container');
+  /**
+  * @type {string}
+  */
   let chosen = "";
 
   do{
@@ -42,9 +53,14 @@ function addRandomGreeting(greetings, last=null) {
 }
 
 /**
- * displays the date on page's header.
+ * Displays the date on page's header.
+ * 
+ * @returns None
  */
 function showDate(date) {
+  /**
+  * @type {Object HTMLParagraphElement}
+  */
   const dateContainer = document.getElementById('date-container');
   dateContainer.innerText = date;
 }
