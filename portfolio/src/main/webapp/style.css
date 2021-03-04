@@ -52,58 +52,32 @@ p{
     font-size: 20px;
 }
 
-.project{
-    overflow: auto;
-    position: relative;
-    width: 100%;
+#date-container{
+    font-size: 20px;
 }
 
-.project-description{
-    float: left;
-    height: 100%;
-    padding-top: 3%;
-    position: absolute;
-    width: 50%;
+#greeting-container {
+    animation: fadeIn 2.5s infinite alternate;
 }
 
-.projmainect-description p{
-    margin: 0;
-}
-
-.tech-stack{
-    float: right;
-    padding: 5%;
-    text-align: center;
-    width: 50%;
-}
-
-.tech-stack img{
-    display: inline-block;
-    height: auto;
-    margin: 0 4%;
-    max-width: 70px;
-    min-height: 70px;
-    width: auto;
+@keyframes fadeIn {
+    from { opacity: 0; }
 }
 
 /*   Header & Footer
 ------------------------------------*/
-.left-panel{
+header .left-panel{
     float: left;
     width: 20%;
 }
 
-.right-panel{
+header .right-panel{
     float: right;
     width: 80%;
 }
 
 header .wrapper-container, footer .wrapper-container {
     background: var(--prussian-blue);
-}
-
-#date-container{
-    font-size: 20px;
 }
 
 footer{
@@ -133,14 +107,6 @@ header img{
     width: auto;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-}
-
-#greeting-container {
-    animation: fadeIn 2.5s infinite alternate;
-}
-
 header p{
     font-size: 30px;
     margin: 0;
@@ -150,4 +116,40 @@ header p{
 ------------------------------------*/
 main .wrapper-container{
     background: var(--celadon-blue);
+}
+
+/*  Projects
+------------------------------------*/
+#my-projects .tech-stack{
+    float: right;
+    padding: 5%;
+    text-align: center;
+    width: 50%;
+}
+
+#my-projects img{
+    display: inline-block;
+    height: auto;
+    margin: 0 4%;
+    max-width: 15%;
+    min-height: 15%;
+    width: auto;
+}
+
+#my-projects .project{
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+
+#my-projects .project-description{
+    float: left;
+    height: 100%;
+    padding-top: 3%;
+    position: absolute;
+    width: 50%;
+}
+
+#my-projects p{
+    margin: 0;
 }
