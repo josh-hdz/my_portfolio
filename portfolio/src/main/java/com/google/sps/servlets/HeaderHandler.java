@@ -18,8 +18,6 @@ public class HeaderHandler extends HttpServlet {
         Gson converter = new Gson();
         HeaderInfo headerInfo = new HeaderInfo(5);
         String json = converter.toJson(headerInfo);
-        
-
         response.setContentType("application/json;");
         response.getWriter().println(json);
     }

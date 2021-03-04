@@ -17,7 +17,7 @@ public final class HeaderInfo{
         this.setTodayDate();
     }
 
-    private void setChosenGreetings(int size){
+    private void setChosenGreetings(int size) {
         Random randomizer = new Random();
         String[] greetings = new String[] {
             "Hello world",
@@ -38,21 +38,27 @@ public final class HeaderInfo{
         };
 
         this.chosenGreetings = new HashSet<String>();
-        if(size > greetings.length) size = greetings.length;
+        if(size > greetings.length) {
+            size = greetings.length;
+        }
         
-        while(chosenGreetings.size() != size){
+        while(chosenGreetings.size() != size) {
             chosenGreetings.add(greetings[randomizer.nextInt(greetings.length)]);
         }
     }
 
-    private void setTodayDate(){
+    private void setTodayDate() {
         Date date = Calendar.getInstance().getTime();
         DateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy");
 
         this.todayDate = formatter.format(date);
     }
 
-    public HashSet<String> getChosenGreetings() {return this.chosenGreetings; }
+    public HashSet<String> getChosenGreetings() {
+        return this.chosenGreetings;
+    }
 
-    public String getTodayDate(){ return this.todayDate; }
+    public String getTodayDate() {
+        return this.todayDate;
+    }
 }
