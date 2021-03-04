@@ -153,3 +153,35 @@ main .wrapper-container{
 #my-projects p{
     margin: 0;
 }
+
+/*  Feedback
+------------------------------------*/
+#feedback textarea{
+    height: 10vh;
+    resize: vertical;
+    width: 100%;
+}
+
+#feedback input[type="checkbox"]{
+    margin-right: 4%;
+}
+
+#feedback table{
+    border-collapse:separate; 
+    border-spacing:1em;
+    margin: 0 20%;
+}
+
+#feedback td.user-input{
+    width: 100%;
+}
+
+#feedback td.form-description{
+    display: block;
+    margin-right: 3%;
+    text-align: right;
+}
+
+#feedback input[name="submit"]{
+    margin: 0 30%;
+}
