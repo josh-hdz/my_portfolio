@@ -154,34 +154,32 @@ main .wrapper-container{
 
 /*  Feedback
 ------------------------------------*/
-#feedback{
-    overflow: hidden;
-}
-
-#feedback .right-panel{
-    margin-right: 14%;
-    width: 55%;
-    height: 30vh;
-}
-
-#feedback .left-panel{
-    margin-left: 14%;
-    text-align: right;
-    width: 15%;
-    height: 30vh;
-}
-
-#feedback label{
-    font-size: 20px;
-}
-
 #feedback textarea{
     height: 10vh;
     resize: vertical;
-    margin-bottom: 2%;
     width: 100%;
 }
 
 #feedback input[type="checkbox"]{
     margin-right: 4%;
+}
+
+#feedback table{
+    border-collapse:separate; 
+    border-spacing:1em;
+    margin: 0 20%;
+}
+
+#feedback td.user-input{
+    width: 100%;
+}
+
+#feedback td.form-description{
+    text-align: right;
+    display: block;
+    margin-right: 3%;
+}
+
+#feedback input[name="submit"]{
+    margin: 0 30%;
 }
