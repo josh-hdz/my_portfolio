@@ -23,6 +23,12 @@ async function setHeaderData(){
 
     showDate(info.todayDate);
     addRandomGreeting(info.chosenGreetings);
+    setInterval(
+        addRandomGreeting,
+        5000,
+        info.chosenGreetings,
+        document.getElementById('greeting-container').innerHTML
+    );
 }
 
 
@@ -49,7 +55,6 @@ function addRandomGreeting(greetings, last) {
   } while(chosen == last);
 
   greeter.innerText = chosen;
-  setInterval(addRandomGreeting, 5000, greetings, chosen);
 }
 
 /**
