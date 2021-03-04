@@ -131,8 +131,8 @@ main .wrapper-container{
     display: inline-block;
     height: auto;
     margin: 0 4%;
-    max-width: 70px;
-    min-height: 70px;
+    max-width: 15%;
+    min-height: 15%;
     width: auto;
 }
 
