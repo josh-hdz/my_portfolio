@@ -16,6 +16,8 @@
 /**
  * Fetches needed info for header and calls needed functions to display greeting 
  * and date in header.
+ * 
+ * @returns None
  */
 async function setHeaderData(){
     const responseFromServer = await fetch('/header-handler');
