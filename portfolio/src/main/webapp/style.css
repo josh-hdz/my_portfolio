@@ -175,9 +175,9 @@ main .wrapper-container{
 }
 
 #feedback td.form-description{
-    text-align: right;
     display: block;
     margin-right: 3%;
+    text-align: right;
 }
 
 #feedback input[name="submit"]{
