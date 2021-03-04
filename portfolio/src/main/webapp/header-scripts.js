@@ -56,7 +56,7 @@ function addRandomGreeting(greetings, last) {
     chosen = greetings[Math.floor(Math.random() * greetings.length)];
   } while(chosen == last);
 
-  greeter.innerText = chosen;
+  greeter.innerText = chosen + "!";
 }
 
 /**
