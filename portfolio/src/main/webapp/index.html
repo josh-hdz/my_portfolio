@@ -127,24 +127,25 @@
                         ideas/challenges to make this website better and make me a better
                         developer.</p>
                     <form action="/form-handler" method="POST">
-                        <table>
-                            <tr>
-                                <td class="form-description"><label>Reason:</label></td>
-                                <td class="user input">
-                                    <label>Feedback</label>
-                                    <input type="checkbox" name="Feedback" value="true">
-                                    <label>Idea/challenge</label>
-                                    <input type="checkbox" name="Idea/challenge" value="true">
-                                    <label>Report bug</label>
-                                    <input type="checkbox" name="Report bug" value="true">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="form-description"><label>Elaborate:</label></td>
-                                <td class="user-input"><textarea name="Description"></textarea></td>
-                            </tr>
-                        </table>
-                        <br/>
+                        <fieldset>
+                            <legend>Reason</legend>
+                            <label>
+                                <input type="radio" name="reason" value="feedback" required>
+                                Feedback   
+                            </label>
+                            <label>
+                                <input type="radio" id="idea/challenge" name="reason" value="idea/challenge">
+                                Idea/challenge
+                            </label>
+                            <label>
+                                <input type="radio" id="report bug" name="reason" value="report bug">
+                                Report bug
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Elaborate</legend>
+                            <textarea name="description" required minlength="40" maxlength="10000"></textarea>
+                        </fieldset>
                         <input type="submit" name="submit">
                     </form>
                 </div>
