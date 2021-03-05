@@ -1,58 +1,70 @@
 /*   Global
 ------------------------------------*/
-:root{
+:root {
     --celadon-blue: #457B9D;
-    --honeydew: #F1FAEE;
+    --cultured: #E9ECEF;
     --imperial-red: #E63946;
-    --prussian-blue: #1D3557;
-    --powder-blue: #A8DADC;
+    --gunmetal: #212529;
+    --french-violete: #7B2CBF;
 }
 
-html{
+html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after{
+*, *:before, *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    background: url("assets/img/background.png");
-    color: white;
+body {
     font-family: Ubuntu;
     margin: 0;
 }
 
-.wrapper-container{
+.wrapper-container {
     max-width: 1150px;
     margin: 0 auto;
     overflow: auto;
     padding: 2%;
 }
 
-h1{
+h1 {
     font-size: 60px;
     margin-bottom: 2%;
     margin-top: 7%;
 }
 
-h2{
+h2 {
     font-size: 40px;
     margin-bottom: 3%;
     margin-top: 3%;
 }
 
-h3{
+h3 {
     font-size: 25px;
     margin-bottom: 1%;
     margin-top: 0;
 }
 
-p{
+h1, h2, h3{
+    color: var(--french-violete);
+}
+
+p {
     font-size: 20px;
 }
 
-#date-container{
+section h2:first-child{
+    margin-top: 0;
+}
+
+section{
+    margin-bottom: 3%;
+}
+
+#date-container {
     font-size: 20px;
 }
 
@@ -66,40 +78,40 @@ p{
 
 /*   Header & Footer
 ------------------------------------*/
-header .left-panel{
+header .left-panel {
     float: left;
     width: 20%;
 }
 
-header .right-panel{
+header .right-panel {
     float: right;
     width: 80%;
 }
 
-header .wrapper-container, footer .wrapper-container {
-    background: var(--prussian-blue);
+header, footer {
+    background: var(--gunmetal);
 }
 
-footer{
+footer {
     text-align: center;
 }
 
-footer h2{
+footer h2 {
     margin-top: 0;
 }
 
-footer img{
+footer img {
     height: 32px;
     width: 32px;
 }
 
-footer a{
+footer a {
     color: white;
     font-size: 20px;
     margin: 10px;
 }
 
-header img{
+header img {
     border-radius: 100px;
     height: auto;
     max-width: 200px;
@@ -107,27 +119,37 @@ header img{
     width: auto;
 }
 
-header p{
+header p {
     font-size: 30px;
     margin: 0;
+    color: white;
 }
 
 /*  Main
 ------------------------------------*/
-main .wrapper-container{
-    background: var(--celadon-blue);
+main {
+    background: var(--cultured);
+}
+
+/*  Education
+------------------------------------*/
+
+/*  About me
+------------------------------------*/
+#about-me p:not(:last-child){
+    margin-bottom: 2%;
 }
 
 /*  Projects
 ------------------------------------*/
-#my-projects .tech-stack{
+#my-projects .tech-stack {
     float: right;
     padding: 5%;
     text-align: center;
     width: 50%;
 }
 
-#my-projects img{
+#my-projects img {
     display: inline-block;
     height: auto;
     margin: 0 4%;
@@ -136,13 +158,13 @@ main .wrapper-container{
     width: auto;
 }
 
-#my-projects .project{
+#my-projects .project {
     overflow: auto;
     position: relative;
     width: 100%;
 }
 
-#my-projects .project-description{
+#my-projects .project-description {
     float: left;
     height: 100%;
     padding-top: 3%;
@@ -150,35 +172,35 @@ main .wrapper-container{
     width: 50%;
 }
 
-#my-projects p{
+#my-projects p {
     margin: 0;
 }
 
 /*  Feedback
 ------------------------------------*/
-#feedback textarea{
+#feedback textarea {
     height: 10vh;
     resize: vertical;
     width: 100%;
 }
 
-#feedback label{
+#feedback label {
     display: inline-block;
     font-size: 17px;
     margin-right: 5%;
 }
 
-#feedback form{
+#feedback form {
     margin: 0 20%;
 }
 
-#feedback fieldset{
+#feedback fieldset {
     border-color: white;
     margin-bottom: 3%;
     padding: 3%;
 }
 
-form + fieldset{
+form + fieldset {
     padding-left: 5%;
 }
 
