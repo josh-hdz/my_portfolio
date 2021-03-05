@@ -2,8 +2,8 @@
 ------------------------------------*/
 :root {
     --celadon-blue: #457B9D;
-    --cultured: #E9ECEF;
-    --imperial-red: #E63946;
+    --cadet-blue-crayola: #ADB5BD;
+    --slate-grey: #6C757D;
     --gunmetal: #212529;
     --french-violete: #7B2CBF;
 }
@@ -32,8 +32,6 @@ body {
 
 h1 {
     font-size: 60px;
-    margin-bottom: 2%;
-    margin-top: 7%;
 }
 
 h2 {
@@ -44,8 +42,6 @@ h2 {
 
 h3 {
     font-size: 25px;
-    margin-bottom: 1%;
-    margin-top: 0;
 }
 
 h1, h2, h3{
@@ -78,6 +74,11 @@ section{
 
 /*   Header & Footer
 ------------------------------------*/
+header h1{
+    margin-bottom: 2%;
+    margin-top: 7%;
+}
+
 header .left-panel {
     float: left;
     width: 20%;
@@ -131,13 +132,35 @@ main {
     background: var(--cultured);
 }
 
-/*  Education
-------------------------------------*/
-
 /*  About me
 ------------------------------------*/
 #about-me p:not(:last-child){
     margin-bottom: 2%;
+}
+
+/*  Education
+------------------------------------*/
+#education h3:not(:last-child){
+    margin-bottom: 1%;
+}
+
+#education h3{
+    margin-top: 3%;
+}
+
+#education li{
+    margin-left: 4%;
+}
+
+#education li, #education p{
+    font-size: 18px;
+}
+
+#education ul p{
+    color: var(--cadete-blue-crayola);
+    margin-top: 2px;
+    margin-bottom: 2%;
+    margin-left: 4%;
 }
 
 /*  Projects
