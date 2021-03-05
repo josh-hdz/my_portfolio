@@ -162,26 +162,27 @@ main .wrapper-container{
     width: 100%;
 }
 
-#feedback input[type="checkbox"]{
-    margin-right: 4%;
+#feedback label{
+    display: inline-block;
+    margin-right: 5%;
+    font-size: 17px;
 }
 
-#feedback table{
-    border-collapse:separate; 
-    border-spacing:1em;
+#feedback form{
     margin: 0 20%;
 }
 
-#feedback td.user-input{
-    width: 100%;
+#feedback fieldset{
+    margin-bottom: 3%;
+    border-color: white;
+    padding: 3%;
 }
 
-#feedback td.form-description{
-    display: block;
-    margin-right: 3%;
-    text-align: right;
+form + fieldset{
+    padding-left: 5%;
 }
 
-#feedback input[name="submit"]{
-    margin: 0 30%;
+#feedback legend {
+    font-size: 17px;
+    padding: 3px 6px;
 }
