@@ -164,8 +164,8 @@ main .wrapper-container{
 
 #feedback label{
     display: inline-block;
-    margin-right: 5%;
     font-size: 17px;
+    margin-right: 5%;
 }
 
 #feedback form{
@@ -173,8 +173,8 @@ main .wrapper-container{
 }
 
 #feedback fieldset{
-    margin-bottom: 3%;
     border-color: white;
+    margin-bottom: 3%;
     padding: 3%;
 }
 
