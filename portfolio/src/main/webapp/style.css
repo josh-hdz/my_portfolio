@@ -111,7 +111,6 @@ footer img {
 }
 
 footer a {
-    color: white;
     font-size: 20px;
     margin: 10px;
 }
@@ -162,13 +161,13 @@ main section:not(:first-child){
 }
 
 #education .left-panel{
-    width: 50%;
     float: left;
+    width: 50%;
 }
 
 #education .right-panel{
-    width: 50%;
     float: right;
+    width: 50%;
 }
 
 #education h3:not(:first-child){
