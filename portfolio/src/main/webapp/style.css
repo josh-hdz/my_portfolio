@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    font-family: Ubuntu;
+    font-family: monospace, sans-serif;
     margin: 0;
 }
 
@@ -46,6 +46,7 @@ h3 {
 
 h1, h2, h3{
     color: var(--french-violete);
+    font-family: ubuntu, sans-serif;
 }
 
 p {
@@ -54,10 +55,6 @@ p {
 
 section h2:first-child{
     margin-top: 0;
-}
-
-section{
-    margin-bottom: 3%;
 }
 
 #date-container {
@@ -80,13 +77,13 @@ header h1{
 }
 
 header .left-panel {
-    float: left;
     width: 20%;
+    float: left;
 }
 
 header .right-panel {
-    float: right;
     width: 80%;
+    float: right;
 }
 
 header, footer {
@@ -126,11 +123,24 @@ header p {
     color: white;
 }
 
+header p:first-child{
+    margin-bottom: 1%;
+}
+
 /*  Main
 ------------------------------------*/
 main {
     background: var(--cultured);
 }
+
+main section:not(:last-child){
+    margin-bottom: 5%;
+}
+
+main section:not(:first-child){
+    margin-top: 5%;
+}
+
 
 /*  About me
 ------------------------------------*/
@@ -140,35 +150,63 @@ main {
 
 /*  Education
 ------------------------------------*/
-#education h3:not(:last-child){
-    margin-bottom: 1%;
+#education {
+    overflow: hidden;
 }
 
-#education h3{
-    margin-top: 3%;
+#education .left-panel{
+    width: 60%;
+    float: left;
+}
+
+#education .right-panel{
+    width: 40%;
+    float: right;
+}
+
+#education h3:not(:first-child){
+    margin-top: 5%;
 }
 
 #education li{
-    margin-left: 4%;
+    margin-left: 6%;
 }
 
 #education li, #education p{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #education ul p{
-    color: var(--cadete-blue-crayola);
+    color: var(--cadet-blue-crayola);
     margin-top: 2px;
-    margin-bottom: 2%;
-    margin-left: 4%;
+    margin-left: 6%;
+}
+
+#education li{
+    margin-top: 1%;
 }
 
 /*  Projects
 ------------------------------------*/
-#my-projects .tech-stack {
+#my-projects .project:nth-child(odd) .tech-stack,
+#my-projects .project:nth-child(even) .project-description {
+    float: left;
+}
+
+#my-projects .project:nth-child(even) .tech-stack,
+#my-projects .project:nth-child(odd) .project-description {
     float: right;
+}
+
+#my-projects .tech-stack {
     padding: 5%;
     text-align: center;
+    width: 50%;
+}
+
+#my-projects .project-description {
+    height: 100%;
+    padding-top: 3%;
     width: 50%;
 }
 
@@ -185,14 +223,6 @@ main {
     overflow: auto;
     position: relative;
     width: 100%;
-}
-
-#my-projects .project-description {
-    float: left;
-    height: 100%;
-    padding-top: 3%;
-    position: absolute;
-    width: 50%;
 }
 
 #my-projects p {
@@ -215,6 +245,10 @@ main {
 
 #feedback form {
     margin: 0 20%;
+}
+
+#feedback p{
+    margin-bottom: 2%;
 }
 
 #feedback fieldset {
