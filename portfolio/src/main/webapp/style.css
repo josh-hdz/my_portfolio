@@ -1,58 +1,63 @@
 /*   Global
 ------------------------------------*/
-:root{
+:root {
     --celadon-blue: #457B9D;
-    --honeydew: #F1FAEE;
-    --imperial-red: #E63946;
-    --prussian-blue: #1D3557;
-    --powder-blue: #A8DADC;
+    --cadet-blue-crayola: #ADB5BD;
+    --slate-grey: #6C757D;
+    --gunmetal: #212529;
+    --french-violete: #7B2CBF;
 }
 
-html{
+html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after{
+*, *:before, *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    background: url("assets/img/background.png");
-    color: white;
-    font-family: Ubuntu;
+body {
+    font-family: monospace, sans-serif;
     margin: 0;
 }
 
-.wrapper-container{
+.wrapper-container {
     max-width: 1150px;
     margin: 0 auto;
     overflow: auto;
     padding: 2%;
 }
 
-h1{
+h1 {
     font-size: 60px;
-    margin-bottom: 2%;
-    margin-top: 7%;
 }
 
-h2{
+h2 {
     font-size: 40px;
     margin-bottom: 3%;
     margin-top: 3%;
 }
 
-h3{
+h3 {
     font-size: 25px;
-    margin-bottom: 1%;
-    margin-top: 0;
 }
 
-p{
+h1, h2, h3 {
+    color: var(--french-violete);
+    font-family: ubuntu, sans-serif;
+}
+
+p {
     font-size: 20px;
 }
 
-#date-container{
+section h2:first-child {
+    margin-top: 0;
+}
+
+#date-container {
     font-size: 20px;
 }
 
@@ -66,40 +71,52 @@ p{
 
 /*   Header & Footer
 ------------------------------------*/
-header .left-panel{
+header h1{
+    margin-bottom: 2%;
+    margin-top: 7%;
+}
+
+header .left-panel {
     float: left;
     width: 20%;
 }
 
-header .right-panel{
+header .right-panel {
     float: right;
     width: 80%;
+    padding-left: 2%;
 }
 
-header .wrapper-container, footer .wrapper-container {
-    background: var(--prussian-blue);
+header, footer {
+    background: linear-gradient(rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.1)),
+                url(assets/background/city-8bits.jpg) no-repeat fixed;
+    background-size: cover;
+    min-height: 40vh;
 }
 
-footer{
+header .wrapper-container {
+    padding-top: 3%;
+}
+
+footer {
     text-align: center;
 }
 
-footer h2{
+footer h2 {
     margin-top: 0;
 }
 
-footer img{
+footer img {
     height: 32px;
     width: 32px;
 }
 
-footer a{
-    color: white;
+footer a {
     font-size: 20px;
     margin: 10px;
 }
 
-header img{
+header img {
     border-radius: 100px;
     height: auto;
     max-width: 200px;
@@ -107,27 +124,101 @@ header img{
     width: auto;
 }
 
-header p{
+header p {
     font-size: 30px;
     margin: 0;
+    color: white;
+}
+
+header p:first-child{
+    margin-bottom: 1%;
 }
 
 /*  Main
 ------------------------------------*/
-main .wrapper-container{
-    background: var(--celadon-blue);
+main {
+    background: var(--cultured);
+}
+
+main section:not(:last-child) {
+    margin-bottom: 5%;
+}
+
+main section:not(:first-child) {
+    margin-top: 5%;
+}
+
+
+/*  About me
+------------------------------------*/
+#about-me p:not(:last-child) {
+    margin-bottom: 2%;
+}
+
+/*  Education
+------------------------------------*/
+#education {
+    overflow: hidden;
+}
+
+#education .left-panel {
+    float: left;
+    width: 50%;
+}
+
+#education .right-panel {
+    float: right;
+    width: 50%;
+}
+
+#education h3:not(:first-child) {
+    margin-top: 5%;
+}
+
+#education li {
+    margin-left: 8%;
+    padding-top: 2%;
+}
+
+#education li, #education p {
+    font-size: 20px;
+}
+
+#education ul p {
+    color: var(--cadet-blue-crayola);
+    margin-top: 2px;
+    margin-left: 8%;
+}
+
+#education li {
+    margin-top: 1%;
 }
 
 /*  Projects
 ------------------------------------*/
-#my-projects .tech-stack{
+#my-projects .project:nth-child(odd) .tech-stack,
+#my-projects .project:nth-child(even) .project-description {
+    float: left;
+}
+
+#my-projects .project:nth-child(even) .tech-stack,
+#my-projects .project:nth-child(odd) .project-description {
     float: right;
+}
+
+#my-projects .tech-stack {
     padding: 5%;
     text-align: center;
     width: 50%;
 }
 
-#my-projects img{
+#my-projects .project-description {
+    height: 100%;
+    padding-top: 3%;
+    width: 50%;
+}
+
+#my-projects img {
     display: inline-block;
     height: auto;
     margin: 0 4%;
@@ -136,53 +227,57 @@ main .wrapper-container{
     width: auto;
 }
 
-#my-projects .project{
+#my-projects img[alt="Docker"] {
+    max-width: 20%;
+}
+
+#my-projects .project {
     overflow: auto;
     position: relative;
     width: 100%;
 }
 
-#my-projects .project-description{
-    float: left;
-    height: 100%;
-    padding-top: 3%;
-    position: absolute;
-    width: 50%;
-}
-
-#my-projects p{
-    margin: 0;
+#my-projects p {
+    margin-top: 2%;
 }
 
 /*  Feedback
 ------------------------------------*/
-#feedback textarea{
+#feedback textarea {
     height: 10vh;
     resize: vertical;
     width: 100%;
 }
 
-#feedback label{
+#feedback label {
     display: inline-block;
     font-size: 17px;
     margin-right: 5%;
 }
 
-#feedback form{
+#feedback form {
     margin: 0 20%;
 }
 
-#feedback fieldset{
+#feedback p {
+    margin-bottom: 4%;
+}
+
+#feedback fieldset {
     border-color: white;
     margin-bottom: 3%;
     padding: 3%;
 }
 
-form + fieldset{
+form + fieldset {
     padding-left: 5%;
 }
 
 #feedback legend {
     font-size: 17px;
     padding: 3px 6px;
+}
+
+#feedback input[type="submit"] {
+    padding: 0.5% 3%;
 }
