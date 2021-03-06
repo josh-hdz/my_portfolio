@@ -84,6 +84,7 @@ header .left-panel {
 header .right-panel {
     float: right;
     width: 80%;
+    padding-left: 2%;
 }
 
 header, footer {
