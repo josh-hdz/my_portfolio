@@ -87,7 +87,14 @@ header .right-panel {
 }
 
 header, footer {
-    background: var(--gunmetal);
+    background: linear-gradient(rgba(33, 37, 41, 0.5), rgba(33, 37, 41, 0.3)),
+                url(assets/background/city-8bits.jpg) no-repeat fixed;
+    background-size: cover;
+    min-height: 40vh;
+}
+
+header .wrapper-container {
+    padding-top: 3%;
 }
 
 footer {
