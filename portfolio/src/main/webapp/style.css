@@ -87,7 +87,7 @@ header .right-panel {
 }
 
 header, footer {
-    background: linear-gradient(rgba(33, 37, 41, 0.5), rgba(33, 37, 41, 0.3)),
+    background: linear-gradient(rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.1)),
                 url(assets/background/city-8bits.jpg) no-repeat fixed;
     background-size: cover;
     min-height: 40vh;
@@ -162,12 +162,12 @@ main section:not(:first-child){
 }
 
 #education .left-panel{
-    width: 60%;
+    width: 50%;
     float: left;
 }
 
 #education .right-panel{
-    width: 40%;
+    width: 50%;
     float: right;
 }
 
@@ -176,7 +176,8 @@ main section:not(:first-child){
 }
 
 #education li{
-    margin-left: 6%;
+    margin-left: 8%;
+    padding-top: 2%;
 }
 
 #education li, #education p{
@@ -186,7 +187,7 @@ main section:not(:first-child){
 #education ul p{
     color: var(--cadet-blue-crayola);
     margin-top: 2px;
-    margin-left: 6%;
+    margin-left: 8%;
 }
 
 #education li{
@@ -226,6 +227,10 @@ main section:not(:first-child){
     width: auto;
 }
 
+#my-projects img[alt="Docker"]{
+    max-width: 20%;
+}
+
 #my-projects .project {
     overflow: auto;
     position: relative;
@@ -233,7 +238,7 @@ main section:not(:first-child){
 }
 
 #my-projects p {
-    margin: 0;
+    margin-top: 2%;
 }
 
 /*  Feedback
@@ -255,7 +260,7 @@ main section:not(:first-child){
 }
 
 #feedback p{
-    margin-bottom: 2%;
+    margin-bottom: 4%;
 }
 
 #feedback fieldset {
@@ -271,4 +276,8 @@ form + fieldset {
 #feedback legend {
     font-size: 17px;
     padding: 3px 6px;
+}
+
+#feedback input[type="submit"]{
+    padding: 0.5% 3%;
 }
