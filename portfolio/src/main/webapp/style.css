@@ -135,25 +135,25 @@ header p:first-child{
 /*  Navegation
 ------------------------------------*/
 nav {
-    text-align: center;
     background: rgba(var(--cultured-rgb), 1.0);
-    position: fixed;
-    width: 100%;
+    left: 0;
     top: 0;
-    left: 0;   
+    position: fixed;
+    text-align: center;
+    width: 100%;
 }
 
 nav a {
     display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
     padding: 1% 1%;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 32px;
 }
 
 nav a:hover{
-    color: #565384;
+    color: var(--orange-peel);
 }
 
 /*  Main
