@@ -15,7 +15,7 @@ import org.jsoup.safety.Whitelist;
 
 /* Servlet responsible for managing user's filled form*/
 @WebServlet("/form-handler")
-public class FormHandlerServlet extends HttpServlet {
+public class FormHandler extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
