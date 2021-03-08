@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
+/*servlet responsable for manging user's filled form*/
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
 
