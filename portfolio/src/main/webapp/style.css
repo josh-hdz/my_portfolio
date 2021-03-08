@@ -132,14 +132,14 @@ header p:first-child{
     margin-bottom: 1%;
 }
 
-/*  Navegation
+/*  Navigation
 ------------------------------------*/
 nav {
     background: rgba(var(--cultured-rgb), 1.0);
     left: 0;
-    top: 0;
     position: fixed;
     text-align: center;
+    top: 0;
     width: 100%;
 }
 
