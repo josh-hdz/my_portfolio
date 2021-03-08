@@ -1,10 +1,12 @@
 /*   Global
 ------------------------------------*/
 :root {
-    --celadon-blue: #457B9D;
-    --cadet-blue-crayola: #ADB5BD;
+    --orange-peel: #f39d2c;
     --slate-grey: #6C757D;
+    --cultured: #E9ECEF;
+    --cultured-rgb: 233, 236, 239;
     --gunmetal: #212529;
+    --gunmetal-rgb: 33, 37, 41;
     --french-violete: #7B2CBF;
 }
 
@@ -27,7 +29,7 @@ body {
     max-width: 1150px;
     margin: 0 auto;
     overflow: auto;
-    padding: 2%;
+    padding: 0 2%;
 }
 
 h1 {
@@ -37,7 +39,6 @@ h1 {
 h2 {
     font-size: 40px;
     margin-bottom: 3%;
-    margin-top: 3%;
 }
 
 h3 {
@@ -51,10 +52,6 @@ h1, h2, h3 {
 
 p {
     font-size: 20px;
-}
-
-section h2:first-child {
-    margin-top: 0;
 }
 
 #date-container {
@@ -88,10 +85,11 @@ header .right-panel {
 }
 
 header, footer {
-    background: linear-gradient(rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.1)),
+    background: linear-gradient(rgba(var(--gunmetal-rgb), 0.8), rgba(var(--gunmetal-rgb), 0.1)),
                 url(assets/background/city-8bits.jpg) no-repeat fixed;
     background-size: cover;
     min-height: 40vh;
+    padding: 5%;
 }
 
 header .wrapper-container {
@@ -134,26 +132,42 @@ header p:first-child{
     margin-bottom: 1%;
 }
 
+/*  Navigation
+------------------------------------*/
+nav {
+    background: rgba(var(--cultured-rgb), 1.0);
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 1% 1%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: var(--orange-peel);
+}
+
 /*  Main
 ------------------------------------*/
 main {
     background: var(--cultured);
 }
 
-main section:not(:last-child) {
-    margin-bottom: 5%;
+main section{
+    margin: 10% 0;
 }
-
-main section:not(:first-child) {
-    margin-top: 5%;
-}
-
 
 /*  About me
 ------------------------------------*/
-#about-me p:not(:last-child) {
-    margin-bottom: 2%;
-}
 
 /*  Education
 ------------------------------------*/
@@ -185,7 +199,7 @@ main section:not(:first-child) {
 }
 
 #education ul p {
-    color: var(--cadet-blue-crayola);
+    color: var(--slate-grey);
     margin-top: 2px;
     margin-left: 8%;
 }
