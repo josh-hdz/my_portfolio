@@ -23,6 +23,7 @@ async function setHeaderData(){
     const responseFromServer = await fetch('/header-handler');
     const info = await responseFromServer.json();
 
+    placeMapRequest();
     showDate(info.todayDate);
     addRandomGreeting(info.chosenGreetings);
     setInterval(
@@ -70,4 +71,23 @@ function showDate(date) {
   */
   const dateContainer = document.getElementById('date-container');
   dateContainer.innerText = date;
+}
+
+async function placeMapRequest(){
+    const responseFromServer = await fetch("/map-credential");
+    const key = await responseFromServer.text();
+    var js_file = document.createElement('script');
+    js_file.type = 'text/javascript';
+    js_file.src = 
+        'https://maps.googleapis.com/maps/api/js?key=' +
+        key +
+        '&callback=initMap'
+    document.getElementsByTagName('head')[0].appendChild(js_file);
+}
+
+/** Creates a map and adds it to the page. */
+function initMap() {
+    let map = new google.maps.Map(
+        document.getElementById('map'),
+        {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
