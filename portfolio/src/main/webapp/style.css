@@ -8,6 +8,7 @@
     --gunmetal: #212529;
     --gunmetal-rgb: 33, 37, 41;
     --french-violete: #7B2CBF;
+    --dark-orchid: #9D4EDD;
 }
 
 html {
@@ -33,7 +34,9 @@ body {
 }
 
 h1 {
+    color: var(--dark-orchid);
     font-size: 60px;
+    font-family: ubuntu, sans-serif;
 }
 
 h2 {
@@ -45,13 +48,18 @@ h3 {
     font-size: 25px;
 }
 
-h1, h2, h3 {
+h2, h3 {
     color: var(--french-violete);
     font-family: ubuntu, sans-serif;
 }
 
 p {
     font-size: 20px;
+}
+
+header,
+section{
+    height: 100vh;
 }
 
 #date-container {
@@ -101,6 +109,7 @@ footer {
 }
 
 footer h2 {
+    color: var(--dark-orchid);
     margin-top: 0;
 }
 
@@ -135,7 +144,7 @@ header p:first-child{
 /*  Navigation
 ------------------------------------*/
 nav {
-    background: rgba(var(--cultured-rgb), 1.0);
+    background: var(--gunmetal);
     left: 0;
     position: fixed;
     text-align: center;
