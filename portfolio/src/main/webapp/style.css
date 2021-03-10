@@ -53,8 +53,8 @@ p {
 header,
 section{
     height: 100vh;
-    width: 100vw;
-    max-width: 100vw;
+    max-width: 99vw;
+    width: 99vw;
 }
 
 #date-container {
@@ -78,7 +78,8 @@ header h1{
 
 header .left-panel {
     float: left;
-    width: 20%;
+    padding-left: 9%;
+    padding-top: 4.5%;
 }
 
 header .right-panel {
@@ -92,11 +93,12 @@ header, footer {
                 url(assets/background/city-8bits.jpg) no-repeat fixed;
     background-size: cover;
     min-height: 40vh;
-    padding: 5%;
+    padding: 1%;
 }
 
 header .wrapper-container {
-    padding-top: 3%;
+    margin: 5% 15%;
+    overflow: hidden;
 }
 
 footer {
@@ -119,10 +121,10 @@ footer a {
 }
 
 header img {
-    border-radius: 100px;
+    border-radius: 100%;
     height: auto;
-    max-width: 200px;
-    min-height: 200px;
+    max-width: 156px;
+    min-height: 156px;
     width: auto;
 }
 
@@ -178,10 +180,11 @@ main {
 }
 
 #map{
+    border-radius: 70%;
     height: 80%;
     width: 40%;
     float: right;
-    top: 10%;
+    top: 14%;
     right: 3%; 
 }
 
