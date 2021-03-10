@@ -28,8 +28,8 @@ body {
 
 h1 {
     color: var(--dark-orchid);
-    font-size: 60px;
     font-family: ubuntu, sans-serif;
+    font-size: 60px;
 }
 
 h2 {
@@ -82,14 +82,14 @@ header h1{
 
 header .left-panel {
     float: left;
-    width: 15%;
     padding-top: 4.5%;
+    width: 15%;
 }
 
 header .right-panel {
     float: right;
-    width: 85%;
     padding-left: 3%;
+    width: 85%;
 }
 
 header, footer {
@@ -125,17 +125,17 @@ footer a {
 }
 
 header img {
-    border-radius: 100%;
     height: auto;
+    border-radius: 100%;
     max-width: 156px;
     min-height: 156px;
     width: auto;
 }
 
 header p {
+    color: white;
     font-size: 30px;
     margin: 0;
-    color: white;
 }
 
 header p:first-child{
@@ -185,18 +185,18 @@ main {
 
 #map{
     border-radius: 70%;
-    height: 100%;
-    width: 40%;
     float: right;
-    top: 5%;
+    height: 100%;
     right: 3%; 
+    top: 5%;
+    width: 40%;
 }
 
 #about-me .wrapper-container{
-    max-width: 50%;
     float: left;
-    margin-top: 10%;
     margin-left: 3%;
+    margin-top: 10%;
+    max-width: 50%;
 }
 
 
@@ -238,8 +238,8 @@ main {
 
 #education ul p {
     color: var(--slate-grey);
-    margin-top: 2px;
     margin-left: 8%;
+    margin-top: 2px;
 }
 
 #education li {
@@ -304,8 +304,8 @@ main {
 /*  Feedback
 ------------------------------------*/
 #feedback .wrapper-container{
-    margin-top: 3%;
     margin-left: 10%;
+    margin-top: 3%;
 }
 
 #feedback textarea {
