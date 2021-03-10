@@ -23,7 +23,7 @@ html {
 
 body {
     font-family: monospace, sans-serif;
-    margin: 0;
+    overflow: overlay;
 }
 
 h1 {
@@ -57,6 +57,10 @@ section{
     width: 99vw;
 }
 
+section {
+    padding: 5% 0;
+}
+
 #date-container {
     font-size: 20px;
 }
@@ -78,14 +82,14 @@ header h1{
 
 header .left-panel {
     float: left;
-    padding-left: 9%;
+    width: 15%;
     padding-top: 4.5%;
 }
 
 header .right-panel {
     float: right;
-    width: 80%;
-    padding-left: 2%;
+    width: 85%;
+    padding-left: 3%;
 }
 
 header, footer {
@@ -97,7 +101,7 @@ header, footer {
 }
 
 header .wrapper-container {
-    margin: 5% 15%;
+    margin: 5% 22%;
     overflow: hidden;
 }
 
@@ -181,17 +185,17 @@ main {
 
 #map{
     border-radius: 70%;
-    height: 80%;
+    height: 100%;
     width: 40%;
     float: right;
-    top: 14%;
+    top: 5%;
     right: 3%; 
 }
 
 #about-me .wrapper-container{
     max-width: 50%;
     float: left;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 3%;
 }
 
