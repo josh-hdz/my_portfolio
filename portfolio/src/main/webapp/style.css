@@ -8,6 +8,7 @@
     --gunmetal: #212529;
     --gunmetal-rgb: 33, 37, 41;
     --french-violete: #7B2CBF;
+    --dark-orchid: #9D4EDD;
 }
 
 html {
@@ -22,17 +23,12 @@ html {
 
 body {
     font-family: monospace, sans-serif;
-    margin: 0;
-}
-
-.wrapper-container {
-    max-width: 1150px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 2%;
+    overflow: overlay;
 }
 
 h1 {
+    color: var(--dark-orchid);
+    font-family: ubuntu, sans-serif;
     font-size: 60px;
 }
 
@@ -45,13 +41,24 @@ h3 {
     font-size: 25px;
 }
 
-h1, h2, h3 {
+h2, h3 {
     color: var(--french-violete);
     font-family: ubuntu, sans-serif;
 }
 
 p {
     font-size: 20px;
+}
+
+header,
+section{
+    height: 100vh;
+    max-width: 99vw;
+    width: 99vw;
+}
+
+section {
+    padding: 5% 0;
 }
 
 #date-container {
@@ -75,13 +82,14 @@ header h1{
 
 header .left-panel {
     float: left;
-    width: 20%;
+    padding-top: 4.5%;
+    width: 15%;
 }
 
 header .right-panel {
     float: right;
-    width: 80%;
-    padding-left: 2%;
+    padding-left: 3%;
+    width: 85%;
 }
 
 header, footer {
@@ -89,11 +97,12 @@ header, footer {
                 url(assets/background/city-8bits.jpg) no-repeat fixed;
     background-size: cover;
     min-height: 40vh;
-    padding: 5%;
+    padding: 1%;
 }
 
 header .wrapper-container {
-    padding-top: 3%;
+    margin: 5% 22%;
+    overflow: hidden;
 }
 
 footer {
@@ -101,6 +110,7 @@ footer {
 }
 
 footer h2 {
+    color: var(--dark-orchid);
     margin-top: 0;
 }
 
@@ -115,17 +125,17 @@ footer a {
 }
 
 header img {
-    border-radius: 100px;
     height: auto;
-    max-width: 200px;
-    min-height: 200px;
+    border-radius: 100%;
+    max-width: 156px;
+    min-height: 156px;
     width: auto;
 }
 
 header p {
+    color: white;
     font-size: 30px;
     margin: 0;
-    color: white;
 }
 
 header p:first-child{
@@ -135,12 +145,13 @@ header p:first-child{
 /*  Navigation
 ------------------------------------*/
 nav {
-    background: rgba(var(--cultured-rgb), 1.0);
+    background: var(--gunmetal);
     left: 0;
     position: fixed;
     text-align: center;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 nav a {
@@ -162,16 +173,42 @@ main {
     background: var(--cultured);
 }
 
-main section{
-    margin: 10% 0;
-}
-
 /*  About me
 ------------------------------------*/
+#about-me p{
+    margin-bottom: 3%;
+}
+
+#about-me section {
+    overflow: hidden;
+}
+
+#map{
+    border-radius: 70%;
+    float: right;
+    height: 100%;
+    right: 3%; 
+    top: 5%;
+    width: 40%;
+}
+
+#about-me .wrapper-container{
+    float: left;
+    margin-left: 3%;
+    margin-top: 10%;
+    max-width: 50%;
+}
+
 
 /*  Education
 ------------------------------------*/
-#education {
+/* #education {
+    
+} */
+
+#education .wrapper-container{
+    margin-left: 7%;
+    margin-top: 3%;
     overflow: hidden;
 }
 
@@ -194,14 +231,15 @@ main section{
     padding-top: 2%;
 }
 
-#education li, #education p {
+#education li,
+#education p {
     font-size: 20px;
 }
 
 #education ul p {
     color: var(--slate-grey);
-    margin-top: 2px;
     margin-left: 8%;
+    margin-top: 2px;
 }
 
 #education li {
@@ -210,6 +248,14 @@ main section{
 
 /*  Projects
 ------------------------------------*/
+#my-projects{
+    height: auto;
+}
+
+#my-projects .wrapper-container{
+    margin: 3% 10%;
+}
+
 #my-projects .project:nth-child(odd) .tech-stack,
 #my-projects .project:nth-child(even) .project-description {
     float: left;
@@ -257,6 +303,11 @@ main section{
 
 /*  Feedback
 ------------------------------------*/
+#feedback .wrapper-container{
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
 #feedback textarea {
     height: 10vh;
     resize: vertical;

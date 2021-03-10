@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="header-scripts.js"></script>
-  </head>
-  <body onload="setHeaderData()">
-      <header>
-          <nav>
-                <a href="#about-me">About</a>
-                <a href="#education">Education</a>
-                <a href="#my-projects">Projects</a>
-                <a href="#feedback">feedback</a>
-          </nav>
-           <div class="wrapper-container">
-              <div class="left-panel">
-                  <img src="assets/img/josh-hdz.jpeg">
-              </div>
-              <div class="right-panel">
-                  <h1>Joshua S. Hernandez Reza</h1>
-                  <p id="greeting-container"></p>
-                  <p id="date-container"></p>
-              </div>
-          </div>
-      </header>
-      <main>
-          <div class="wrapper-container">
-                <!------------------------------about me START---------------------------->
-                <section id="about-me">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="header-scripts.js"></script>
+    </head>
+    <body onload="setHeaderData()">
+         <nav>
+            <a href="#about-me">About</a>
+            <a href="#education">Education</a>
+            <a href="#my-projects">Projects</a>
+            <a href="#feedback">feedback</a>
+        </nav>
+        <header>
+            <div class="wrapper-container">
+                <div class="left-panel">
+                    <img src="assets/img/josh-hdz.jpeg">
+                </div>
+                <div class="right-panel">
+                    <h1>Joshua S. Hernandez Reza</h1>
+                    <p id="greeting-container"></p>
+                    <p id="date-container"></p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!------------------------------about me START---------------------------->
+            <section id="about-me">
+                <div class="wrapper-container">
                     <h2>Let me tell you a little about me!</h2>
                     <p>I  was born in Ciudad Juarez, Chihuahua, Mexico. A small
                         city back in the day. Yet if you ask me where I'm from I would
@@ -51,149 +51,157 @@
                         there was some missunderstandigs with my student visa so I had to
                         take my career goal and continue it in Mexico at El
                         Tecnologico de Monterrey where I'm a sophmore now.</p>
-                </section>
+
+                </div>
+                <div id="map"></div>
+            </section>
                 <hr>                
                 <!------------------------------Education START---------------------------->
                 <section id="education">
-                    <h2>Education (relevant classes)</h2>
-                    <div class="left-panel">
-                        <h3>Tecnologico de Monterrey</h3>
-                        <p>August 2019 - August 2023</p>
-                        <ul>
-                            <li>Pensamiento computacional y programación(Python)</li>
-                            <p>Computational thinking and programming(Python).</p>
-                            <li>Programación Orientada a Objetos (C++).</li>
-                            <p>Object Oriented Programming (C++).</p>
-                            <li>Implementación de internet de las cosas.</li>
-                            <p>Implementation of internet of things.</p>
-                            <li>Estructura de datos y algoritmosfundamentales(C++).</li>
-                            <p>Data structures and fundamental algorithms(C++).</p>
-                            <li>Análisis de requerimientos de software.</li>
-                            <p>Software requirements analysis.</p>
-                        </ul>
-                    </div>
-                    <div class="right-panel">
-                        <h3>Diablo Valley College</h3>
-                        <p>2016 - 2018</p>
-                        <ul>
-                            <li>Introduction to programming (C++).</li>
-                            <li>Advanced programming with C and C++.</li>
-                        </ul>
-                        <h3>Other</h3>
-                        <ul>
-                            <li>CS50's Introduction to AI with Python.</li>
-                            <p>HarvardX</p>
-                            <li>CS50's Introduction to AI with Python.</li>
-                            <p>HarvardX</p>
-                        </ul>
+                    <div class="wrapper-container">
+                        <h2>Education (relevant classes)</h2>
+                        <div class="left-panel">
+                            <h3>Tecnologico de Monterrey</h3>
+                            <p>August 2019 - August 2023</p>
+                            <ul>
+                                <li>Pensamiento computacional y programación(Python)</li>
+                                <p>Computational thinking and programming(Python).</p>
+                                <li>Programación Orientada a Objetos (C++).</li>
+                                <p>Object Oriented Programming (C++).</p>
+                                <li>Implementación de internet de las cosas.</li>
+                                <p>Implementation of internet of things.</p>
+                                <li>Estructura de datos y algoritmosfundamentales(C++).</li>
+                                <p>Data structures and fundamental algorithms(C++).</p>
+                                <li>Análisis de requerimientos de software.</li>
+                                <p>Software requirements analysis.</p>
+                            </ul>
+                        </div>
+                        <div class="right-panel">
+                            <h3>Diablo Valley College</h3>
+                            <p>2016 - 2018</p>
+                            <ul>
+                                <li>Introduction to programming (C++).</li>
+                                <li>Advanced programming with C and C++.</li>
+                            </ul>
+                            <h3>Other</h3>
+                            <ul>
+                                <li>CS50's Introduction to AI with Python.</li>
+                                <p>HarvardX</p>
+                                <li>Wireshark: Packet Analysis and Ethical Hacking: Core Skills.</li>
+                                <p>Udemy</p>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <hr>
                 <!------------------------------My Projects START---------------------------->
                 <section id="my-projects">
-                    <h2>Projects</h2>
-                    <!-------------------Project SECOM START-------------------->
-                    <div class="project">
-                        <div class="project-description">
-                            <h3>SECOM LAN application (In development).</h3>
-                            <p>Python based application to keep track of the
-                                inventory for a small company dedicated to electric
-                                installations.</p>
+                    <div class="wrapper-container">
+                        <h2>Projects</h2>
+                        <!-------------------Project SECOM START-------------------->
+                        <div class="project">
+                            <div class="project-description">
+                                <h3>SECOM LAN application (In development).</h3>
+                                <p>Python based application to keep track of the
+                                    inventory for a small company dedicated to electric
+                                    installations.</p>
+                            </div>
+                            <div class="tech-stack">
+                                <img src="assets/logo/python.png" alt="Python">
+                                <img src="assets/logo/mysql.png" alt="MySQL">
+                                <img src="assets/logo/raspberry-pi.png"
+                                    alt="Raspberry Pi">
+                                <img src="assets/logo/git.png" alt="Git">
+                            </div>
                         </div>
-                        <div class="tech-stack">
-                            <img src="assets/logo/python.png" alt="Python">
-                            <img src="assets/logo/mysql.png" alt="MySQL">
-                            <img src="assets/logo/raspberry-pi.png"
-                                alt="Raspberry Pi">
-                            <img src="assets/logo/git.png" alt="Git">
+                        <!------------------Project bIoT START---------------------->
+                        <div class="project">
+                            <div class="project-description">
+                                <h3>bIoT.</h3>
+                                <p>IoT network of garbage containers for
+                                    the recollection of data to train AI to increase efficiency
+                                    of garbage recollection routes inside school campus.</p>
+                            </div>
+                            <div class="tech-stack">
+                                <img src="assets/logo/c++.png" alt="c++">
+                                <img src="assets/logo/vertical-firebase.png"
+                                    alt="Firebase">
+                                <img src="assets/logo/microcontroller.png"
+                                    alt="Arduino">
+                            </div>
                         </div>
-                    </div>
-                    <!------------------Project bIoT START---------------------->
-                    <div class="project">
-                        <div class="project-description">
-                            <h3>bIoT.</h3>
-                            <p>IoT network of garbage containers for
-                                the recollection of data to train AI to increase efficiency
-                                of garbage recollection routes inside school campus.</p>
+                        <!-----------------Project LAN server START------------------->
+                        <div class="project">
+                            <div class="project-description">
+                                <h3>LAN server</h3>
+                                <p>With help of docer containers and open
+                                    source software I configure my raspberry pi
+                                    as a NAS server as well as a network wide
+                                    filter for ads.</p>
+                            </div>
+                            <div class="tech-stack">
+                                <img src="assets/logo/raspberry-pi.png"
+                                    alt="Raspberry pi">
+                                <img src="assets/logo/docker.png"
+                                    alt="Docker">
+                            </div>
                         </div>
-                        <div class="tech-stack">
-                            <img src="assets/logo/c++.png" alt="c++">
-                            <img src="assets/logo/vertical-firebase.png"
-                                alt="Firebase">
-                            <img src="assets/logo/microcontroller.png"
-                                alt="Arduino">
+                        <!-----------------Project SEARCH START------------------------>
+                        <div class="project">
+                            <div class="project-description">
+                                <h3>Search streaming services.</h3>
+                                <p>Object oriented C++ console application for searching
+                                and rating movies and series.</p>
+                            </div>
+                            <div class="tech-stack">
+                                <img src="assets/logo/c++.png" alt="C++">
+                            </div>
                         </div>
-                    </div>
-                    <!-----------------Project LAN server START------------------->
-                    <div class="project">
-                        <div class="project-description">
-                            <h3>LAN server</h3>
-                            <p>With help of docer containers and open
-                                source software I configure my raspberry pi
-                                as a NAS server as well as a network wide
-                                filter for ads.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <img src="assets/logo/raspberry-pi.png"
-                                alt="Raspberry pi">
-                            <img src="assets/logo/docker.png"
-                                alt="Docker">
-                        </div>
-                    </div>
-                    <!-----------------Project SEARCH START------------------------>
-                    <div class="project">
-                        <div class="project-description">
-                            <h3>Search streaming services.</h3>
-                            <p>Object oriented C++ console application for searching
-                            and rating movies and series.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <img src="assets/logo/c++.png" alt="C++">
-                        </div>
-                    </div>
-                    <!-----------------Project Hangman START----------------------->
-                    <div class="project">
-                        <div class="project-description">
-                            <h3><i>Hangman.</i></h3>
-                            <p>Python console game for a second-degree
-                                equation-based hangman.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <img src="assets/logo/python.png" alt="Python">
+                        <!-----------------Project Hangman START----------------------->
+                        <div class="project">
+                            <div class="project-description">
+                                <h3><i>Hangman.</i></h3>
+                                <p>Python console game for a second-degree
+                                    equation-based hangman.</p>
+                            </div>
+                            <div class="tech-stack">
+                                <img src="assets/logo/python.png" alt="Python">
+                            </div>
                         </div>
                     </div>
                 </section>
                 <hr>
                 <!-------------------------------Form START----------------------------------->
                 <section id="feedback">
-                    <h2>Help me to get better</h2>
-                    <p>I'm more of a back-end person. Please feel free to give feedback or
-                        ideas/challenges to make this website better and make me a better
-                        developer.</p>
-                    <form action="/form-handler" method="POST">
-                        <fieldset>
-                            <legend>Reason</legend>
-                            <label>
-                                <input type="radio" name="reason" value="feedback" required>
-                                Feedback   
-                            </label>
-                            <label>
-                                <input type="radio" id="idea/challenge" name="reason" value="idea/challenge">
-                                Idea/challenge
-                            </label>
-                            <label>
-                                <input type="radio" id="report bug" name="reason" value="report bug">
-                                Report bug
-                            </label>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Elaborate</legend>
-                            <textarea name="description" required minlength="40" maxlength="10000"></textarea>
-                        </fieldset>
-                        <input type="submit" name="submit">
-                    </form>
+                    <div class="wrapper-container">
+                        <h2>Help me to get better</h2>
+                        <p>I'm more of a back-end person. Please feel free to give feedback or
+                            ideas/challenges to make this website better and make me a better
+                            developer.</p>
+                        <form action="/form-handler" method="POST">
+                            <fieldset>
+                                <legend>Reason</legend>
+                                <label>
+                                    <input type="radio" name="reason" value="feedback" required>
+                                    Feedback   
+                                </label>
+                                <label>
+                                    <input type="radio" id="idea/challenge" name="reason" value="idea/challenge">
+                                    Idea/challenge
+                                </label>
+                                <label>
+                                    <input type="radio" id="report bug" name="reason" value="report bug">
+                                    Report bug
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Elaborate</legend>
+                                <textarea name="description" required minlength="40" maxlength="10000"></textarea>
+                            </fieldset>
+                            <input type="submit" name="submit">
+                        </form>
+                    </div>
                 </section>
-            </div>
         </main>
     </body>
     <!----------------------------------Footer START-------------------------------------->

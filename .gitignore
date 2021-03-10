@@ -4,3 +4,4 @@
 .settings/
 target/
 .theia
+env_variables.yaml

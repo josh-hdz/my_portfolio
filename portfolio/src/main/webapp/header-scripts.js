@@ -31,6 +31,7 @@ async function setHeaderData(){
         info.chosenGreetings,
         document.getElementById('greeting-container').innerHTML
     );
+    placeMapRequest();
 }
 
 
@@ -70,4 +71,36 @@ function showDate(date) {
   */
   const dateContainer = document.getElementById('date-container');
   dateContainer.innerText = date;
+}
+
+async function placeMapRequest(){
+    const responseFromServer = await fetch("/map-credential");
+    const key = await responseFromServer.text();
+    var js_file = document.createElement('script');
+    js_file.type = 'text/javascript';
+    js_file.src = 
+        'https://maps.googleapis.com/maps/api/js?key=' +
+        key +
+        '&callback=initMap&libraries=&v=weekly';
+    document.getElementsByTagName('head')[0].appendChild(js_file);
+}
+
+/** Creates a map and adds it to the page. */
+function initMap() {
+    let map;
+    map = new google.maps.Map(
+        document.getElementById("map"),
+        {
+            center: {lat: 31.6, lng: -106.5}, 
+            zoom: 5,
+            mapTypeId: 'terrain'
+        }
+    );
+
+    // TODO(Josh Hdz): use code below to add all marks fetched from jserveelt.
+    // new google.maps.Marker({
+    //     position: {lat: 37.7747, lng: -121.9735},
+    //     map,
+    //     title: "San Ramon, CA",
+    // });
 }
