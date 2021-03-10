@@ -202,7 +202,13 @@ main {
 
 /*  Education
 ------------------------------------*/
-#education {
+/* #education {
+    
+} */
+
+#education .wrapper-container{
+    margin-left: 7%;
+    margin-top: 3%;
     overflow: hidden;
 }
 
@@ -225,7 +231,8 @@ main {
     padding-top: 2%;
 }
 
-#education li, #education p {
+#education li,
+#education p {
     font-size: 20px;
 }
 
@@ -241,6 +248,14 @@ main {
 
 /*  Projects
 ------------------------------------*/
+#my-projects{
+    height: auto;
+}
+
+#my-projects .wrapper-container{
+    margin: 3% 10%;
+}
+
 #my-projects .project:nth-child(odd) .tech-stack,
 #my-projects .project:nth-child(even) .project-description {
     float: left;
@@ -288,6 +303,11 @@ main {
 
 /*  Feedback
 ------------------------------------*/
+#feedback .wrapper-container{
+    margin-top: 3%;
+    margin-left: 10%;
+}
+
 #feedback textarea {
     height: 10vh;
     resize: vertical;
