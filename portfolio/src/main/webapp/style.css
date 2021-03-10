@@ -26,13 +26,6 @@ body {
     margin: 0;
 }
 
-.wrapper-container {
-    max-width: 1150px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 2%;
-}
-
 h1 {
     color: var(--dark-orchid);
     font-size: 60px;
@@ -60,6 +53,8 @@ p {
 header,
 section{
     height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 #date-container {
@@ -150,6 +145,7 @@ nav {
     text-align: center;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 nav a {
@@ -171,12 +167,31 @@ main {
     background: var(--cultured);
 }
 
-main section{
-    margin: 10% 0;
-}
-
 /*  About me
 ------------------------------------*/
+#about-me p{
+    margin-bottom: 3%;
+}
+
+#about-me section {
+    overflow: hidden;
+}
+
+#map{
+    height: 80%;
+    width: 40%;
+    float: right;
+    top: 10%;
+    right: 3%; 
+}
+
+#about-me .wrapper-container{
+    max-width: 50%;
+    float: left;
+    margin-top: 15%;
+    margin-left: 3%;
+}
+
 
 /*  Education
 ------------------------------------*/

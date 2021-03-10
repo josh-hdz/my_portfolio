@@ -23,7 +23,6 @@ async function setHeaderData(){
     const responseFromServer = await fetch('/header-handler');
     const info = await responseFromServer.json();
 
-    placeMapRequest();
     showDate(info.todayDate);
     addRandomGreeting(info.chosenGreetings);
     setInterval(
@@ -32,6 +31,7 @@ async function setHeaderData(){
         info.chosenGreetings,
         document.getElementById('greeting-container').innerHTML
     );
+    placeMapRequest();
 }
 
 
@@ -81,13 +81,25 @@ async function placeMapRequest(){
     js_file.src = 
         'https://maps.googleapis.com/maps/api/js?key=' +
         key +
-        '&callback=initMap'
+        '&callback=initMap&libraries=&v=weekly';
     document.getElementsByTagName('head')[0].appendChild(js_file);
 }
 
 /** Creates a map and adds it to the page. */
 function initMap() {
-    let map = new google.maps.Map(
-        document.getElementById('map'),
-        {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+    let map;
+    map = new google.maps.Map(
+        document.getElementById("map"),
+        {
+            center: {lat: 31.6, lng: -106.5}, 
+            zoom: 5,
+            mapTypeId: 'terrain'
+        }
+    );
+
+    // new google.maps.Marker({
+    //     position: {lat: 37.7747, lng: -121.9735},
+    //     map,
+    //     title: "San Ramon, CA",
+    // });
 }
