@@ -34,7 +34,7 @@ public final class HeaderInfo{
             "Ahoj dvet",
             "Halló heimur",
             "Zdravo svijete",
-            "Hej världen",
+            "Hej världen"
         };
 
         this.chosenGreetings = new HashSet<String>();

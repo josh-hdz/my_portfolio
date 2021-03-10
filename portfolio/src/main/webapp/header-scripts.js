@@ -97,6 +97,7 @@ function initMap() {
         }
     );
 
+    // TODO(Josh Hdz): use code below to add all marks fetched from jserveelt.
     // new google.maps.Marker({
     //     position: {lat: 37.7747, lng: -121.9735},
     //     map,
