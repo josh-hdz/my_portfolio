@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+let markers;
 
 /**
  * Fetches needed info for header and calls needed functions to display greeting 
@@ -78,13 +79,15 @@ async function placeMapRequest(apiKey){
     var js_file = document.createElement('script');
     js_file.type = 'text/javascript';
     js_file.src = 
-        'https://maps.googleapis.com/maps/api/js?key=' + apiKey;
+        'https://maps.googleapis.com/maps/api/js?key=' +
+        apiKey +
+        '&callback=initMap';
     document.getElementsByTagName('head')[0].appendChild(js_file);
 }
 
 /** Creates a map with maerkes and adds it to the page. */
-function initMap(markers) {
-    let map = new google.maps.Map(
+function initMap() {
+    map = new google.maps.Map(
         document.getElementById("map"),
         {
             center: {lat: 31.6, lng: -106.5}, 
@@ -95,10 +98,9 @@ function initMap(markers) {
 
     markers.forEach(mark => {
         new google.maps.Marker({
-            position: {lat: mark,latitude, lng: mark,longitude},
+            position: {lat: mark.latitude, lng: mark.longitude},
             map,
-            title: mark,label
+            title: mark.label
         });    
     });
-    
 }
