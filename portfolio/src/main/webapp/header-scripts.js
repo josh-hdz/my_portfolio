@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+* @type {Array<String, double, double>}
+*/
 let markers;
 
 /**
@@ -21,7 +24,13 @@ let markers;
  * @returns None
  */
 async function setHeaderData(){
+    /**
+    * @type {Object Response}
+    */
     const responseFromServer = await fetch('/initial-values');
+    /**
+    * @type {Object json}
+    */
     const info = await responseFromServer.json();
     markers =  info[1].markers;
 
@@ -85,9 +94,13 @@ async function placeMapRequest(apiKey){
     document.getElementsByTagName('head')[0].appendChild(js_file);
 }
 
-/** Creates a map with maerkes and adds it to the page. */
+/** 
+ * Creates a map with maerkes and adds it to the page. 
+ * 
+ * @returns None.
+ */
 function initMap() {
-    map = new google.maps.Map(
+    let map = new google.maps.Map(
         document.getElementById("map"),
         {
             center: {lat: 31.6, lng: -106.5}, 
