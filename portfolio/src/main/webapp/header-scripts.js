@@ -23,17 +23,17 @@ let markers;
 async function setHeaderData(){
     const responseFromServer = await fetch('/initial-values');
     const info = await responseFromServer.json();
+    markers =  info[1].markers;
 
     showDate(info[0].todayDate);
-    addRandomGreeting(info[0].chosenGreetings);
+    addRandomGreeting(info[0].chosenGreetings, null);
     setInterval(
         addRandomGreeting,
         5000,
-        info.chosenGreetings,
+        info[0].chosenGreetings,
         document.getElementById('greeting-container').innerHTML
     );
     placeMapRequest(info[1].apiKey);
-    initMap(info[1].markers)
 }
 
 
