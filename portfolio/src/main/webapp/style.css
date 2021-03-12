@@ -151,17 +151,39 @@ nav {
     z-index: 10;
 }
 
-nav a {
-    display: inline-block;
-    font-size: 32px;
-    font-weight: 700;
-    padding: 1% 1%;
-    text-decoration: none;
-    text-transform: uppercase;
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
 }
 
-nav a:hover{
-    color: var(--orange-peel);
+nav li a{
+    text-decoration: none;
+    color: var(--dark-orchid);
+    margin-right: 3em;
+    position: relative;
+    transition: all ease-in-out 250ms;
+    font-size: 25px;
+}
+
+nav li a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.2em;
+    width: 0%;
+    background-color: var(--orange-peel);
+    bottom: -1rem;
+    transition: all ease-in-out 250ms;
+}
+
+nav li a:hover::after {
+    width: 100%;
+}
+
+nav li a:hover {
+    color: var(--dark-orchid);
 }
 
 /*  Main
