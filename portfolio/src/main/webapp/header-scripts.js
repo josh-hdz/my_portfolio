@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+* @type {Array<String, double, double>}
+*/
+let markers;
 
 /**
  * Fetches needed info for header and calls needed functions to display greeting 
@@ -20,18 +24,25 @@
  * @returns None
  */
 async function setHeaderData(){
-    const responseFromServer = await fetch('/header-handler');
+    /**
+    * @type {Object Response}
+    */
+    const responseFromServer = await fetch('/initial-values');
+    /**
+    * @type {Object json}
+    */
     const info = await responseFromServer.json();
+    markers =  info[1].markers;
 
-    showDate(info.todayDate);
-    addRandomGreeting(info.chosenGreetings);
+    showDate(info[0].todayDate);
+    addRandomGreeting(info[0].chosenGreetings, null);
     setInterval(
         addRandomGreeting,
         5000,
-        info.chosenGreetings,
+        info[0].chosenGreetings,
         document.getElementById('greeting-container').innerHTML
     );
-    placeMapRequest();
+    placeMapRequest(info[1].apiKey);
 }
 
 
@@ -73,22 +84,23 @@ function showDate(date) {
   dateContainer.innerText = date;
 }
 
-async function placeMapRequest(){
-    const responseFromServer = await fetch("/map-credential");
-    const key = await responseFromServer.text();
+async function placeMapRequest(apiKey){
     var js_file = document.createElement('script');
     js_file.type = 'text/javascript';
     js_file.src = 
         'https://maps.googleapis.com/maps/api/js?key=' +
-        key +
-        '&callback=initMap&libraries=&v=weekly';
+        apiKey +
+        '&callback=initMap';
     document.getElementsByTagName('head')[0].appendChild(js_file);
 }
 
-/** Creates a map and adds it to the page. */
+/** 
+ * Creates a map with maerkes and adds it to the page. 
+ * 
+ * @returns None.
+ */
 function initMap() {
-    let map;
-    map = new google.maps.Map(
+    let map = new google.maps.Map(
         document.getElementById("map"),
         {
             center: {lat: 31.6, lng: -106.5}, 
@@ -97,10 +109,11 @@ function initMap() {
         }
     );
 
-    // TODO(Josh Hdz): use code below to add all marks fetched from jserveelt.
-    // new google.maps.Marker({
-    //     position: {lat: 37.7747, lng: -121.9735},
-    //     map,
-    //     title: "San Ramon, CA",
-    // });
+    markers.forEach(mark => {
+        new google.maps.Marker({
+            position: {lat: mark.latitude, lng: mark.longitude},
+            map,
+            title: mark.label
+        });    
+    });
 }
