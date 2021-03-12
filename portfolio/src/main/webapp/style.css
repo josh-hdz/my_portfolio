@@ -22,32 +22,32 @@ html {
 }
 
 body {
-    font-family: monospace, sans-serif;
+    font-family: franklin-gothic, sans-serif;
     overflow: overlay;
 }
 
 h1 {
     color: var(--dark-orchid);
-    font-family: ubuntu, sans-serif;
-    font-size: 60px;
+    font-family: monospace, sans-serif;
+    font-size: 70px;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 3%;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 h2, h3 {
     color: var(--french-violete);
-    font-family: ubuntu, sans-serif;
+    font-family: monospace, sans-serif;
 }
 
 p {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 header,
@@ -59,10 +59,6 @@ section{
 
 section {
     padding: 5% 0;
-}
-
-#date-container {
-    font-size: 20px;
 }
 
 #greeting-container {
@@ -146,6 +142,7 @@ header p:first-child{
 ------------------------------------*/
 nav {
     background: var(--gunmetal);
+    font-family: monospace, sans-serif;
     left: 0;
     position: fixed;
     text-align: center;
@@ -154,17 +151,39 @@ nav {
     z-index: 10;
 }
 
-nav a {
-    display: inline-block;
-    font-size: 32px;
-    font-weight: 700;
-    padding: 1% 1%;
-    text-decoration: none;
-    text-transform: uppercase;
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1em 0;
 }
 
-nav a:hover{
-    color: var(--orange-peel);
+nav li a{
+    color: var(--dark-orchid);
+    font-size: 25px;
+    margin-right: 3em;
+    position: relative;
+    text-decoration: none;
+    transition: all ease-in-out 250ms;
+}
+
+nav li a::after{
+    background-color: var(--orange-peel);
+    bottom: -1rem;
+    content: '';
+    display: block;
+    height: 0.2em;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    width: 0%;
+}
+
+nav li a:hover::after {
+    width: 100%;
+}
+
+nav li a:hover {
+    color: var(--dark-orchid);
 }
 
 /*  Main
@@ -228,9 +247,8 @@ main {
     padding-top: 2%;
 }
 
-#education li,
-#education p {
-    font-size: 20px;
+#education li {
+    font-size: 25px;
 }
 
 #education ul p {
@@ -313,7 +331,7 @@ main {
 
 #feedback label {
     display: inline-block;
-    font-size: 17px;
+    font-size: 25px;
     margin-right: 5%;
 }
 
@@ -336,10 +354,11 @@ form + fieldset {
 }
 
 #feedback legend {
-    font-size: 17px;
+    font-size: 25px;
     padding: 3px 6px;
 }
 
 #feedback input[type="submit"] {
     padding: 0.5% 3%;
+    font-size: 25px;
 }
