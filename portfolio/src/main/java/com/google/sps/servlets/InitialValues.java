@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/** Servlet handles info needed for header (greeting & date) */
+/** 
+ * Servlet handles info needed for header (greeting & date)
+ * */
 @WebServlet("/initial-values")
 public class InitialValues extends HttpServlet {
 
