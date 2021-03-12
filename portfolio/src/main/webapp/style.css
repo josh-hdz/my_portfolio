@@ -152,30 +152,30 @@ nav {
 }
 
 nav ul{
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
     padding: 1em 0;
 }
 
 nav li a{
-    text-decoration: none;
     color: var(--dark-orchid);
+    font-size: 25px;
     margin-right: 3em;
     position: relative;
+    text-decoration: none;
     transition: all ease-in-out 250ms;
-    font-size: 25px;
 }
 
 nav li a::after{
-    content: '';
-    position: absolute;
-    display: block;
-    height: 0.2em;
-    width: 0%;
     background-color: var(--orange-peel);
     bottom: -1rem;
+    content: '';
+    display: block;
+    height: 0.2em;
+    position: absolute;
     transition: all ease-in-out 250ms;
+    width: 0%;
 }
 
 nav li a:hover::after {
