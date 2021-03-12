@@ -1,10 +1,11 @@
 package com.google.sps.data;
 
 import java.util.ArrayList;
-import javax.servlet.http.HttpServlet;
 
-
-public class GoogleMap extends HttpServlet {
+/**
+ * Object contains all needed data for Google map.
+ */
+public class GoogleMap {
 
     final String apiKey;
     ArrayList<Marker> markers;
