@@ -11,45 +11,19 @@ public class GoogleMap extends HttpServlet {
 
     public GoogleMap(){
 
-        String[] label = {
-            "Chihuahua, Chih",
-            "Juarez, Chih",
-            "Monterrey, N.L.",
-            "Santa Catarina, N.L.",
-            "Guadalupe, N.L.",
-            "San Nicolas, N.L.",
-            "San Ramon, Ca",
-            "Guadalajara, Jal"
-        };
-
-        double[] lat = {
-            28.6709132,
-            31.6538753,
-            25.6487782,            
-            25.6845256,
-            25.6766854,
-            25.7358827,
-            37.7581036,
-            20.6737883
-        };
-
-        double[] lng = {
-            -106.1346578,
-            -106.5189751,
-            -100.3731359,
-            -100.5235758,
-            -100.2351512,
-            -100.3052989,
-            -121.9756271,
-            -103.3704326
-        };
-
         this.apiKey = System.getenv("GOOGLE_MAPS_API_KEY");
         this.markers = new ArrayList<Marker>();
 
-        for(int i = 0; i < label.length; i++){
-            this.markers.add(new Marker(label[i], lat[i], lng[i]));
-        }
+        this.markers.add(new Marker("Chihuahua, Chih", 28.6709132, -106.1346578));
+        this.markers.add(new Marker("Juarez, Chih", 31.6538753, -106.5189751));
+        this.markers.add(new Marker("Monterrey, N.L.", 25.6487782, -100.3731359));
+        this.markers.add(new Marker("Santa Catarina, N.L.", 25.6845256, -100.5235758));
+        this.markers.add(new Marker("Guadalupe, N.L.", 25.6766854, -100.2351512));
+        this.markers.add(new Marker("San Nicolas, N.L.", 25.7358827, -100.3052989));
+        this.markers.add(new Marker("San Ramon, Ca", 37.7581036, -121.9756271));
+        this.markers.add(new Marker("Guadalajara, Jal", 20.6737883, -103.3704326));
+
+
     }
 
     public String getApiKey(){
