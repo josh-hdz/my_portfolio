@@ -103,7 +103,7 @@ function initMap() {
     let map = new google.maps.Map(
         document.getElementById("map"),
         {
-            center: {lat: 31.6, lng: -106.5}, 
+            center: {lat: 33.1411941, lng: -107.5956095}, 
             zoom: 5,
             mapTypeId: 'terrain'
         }
